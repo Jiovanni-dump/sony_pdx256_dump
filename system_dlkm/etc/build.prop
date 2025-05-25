@@ -1,0 +1,21 @@
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.system_dlkm.brand=Sony
+ro.product.system_dlkm.device=pdx256
+ro.product.system_dlkm.manufacturer=Sony
+ro.product.system_dlkm.model=Pdx256
+ro.product.system_dlkm.name=pdx256
+ro.system_dlkm.build.date=Thu Apr  3 03:07:54 JST 2025
+ro.system_dlkm.build.date.utc=1743617274
+ro.system_dlkm.build.fingerprint=Sony/pdx256/pdx256:15/AQ3A.241126.002/SHIMANTO-1.0.0-REL-250402-1707:user/release-keys
+ro.system_dlkm.build.id=AQ3A.241126.002
+ro.system_dlkm.build.tags=release-keys
+ro.system_dlkm.build.type=user
+ro.system_dlkm.build.version.incremental=SHIMANTO-1.0.0-REL-250402-1707
+ro.system_dlkm.build.version.release=15
+ro.system_dlkm.build.version.release_or_codename=15
+ro.system_dlkm.build.version.sdk=35
+# end of file
+

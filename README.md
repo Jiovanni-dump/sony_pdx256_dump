@@ -1,0 +1,14 @@
+# sssi_64-user 15 AQ3A.241126.002 QSSI-15.2.0-REL-250405-1707 release-keys
+- manufacturer: sony
+- platform: sun
+- codename: pdx256
+- flavor: sssi_64-user
+- release: 15
+- id: 71.0.A.2.22
+- incremental: QSSI-15.2.0-REL-250405-1707
+- tags: release-keys
+- fingerprint: Sony/pdx256/pdx256:15/AQ3A.241126.002/SHIMANTO-1.0.0-REL-250402-1707:user/release-keys
+- is_ab: true
+- brand: Sony
+- branch: sssi_64-user-15-AQ3A.241126.002-QSSI-15.2.0-REL-250405-1707-release-keys
+- repo: sony_pdx256_dump
