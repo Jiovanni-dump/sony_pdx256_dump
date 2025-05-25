@@ -1,0 +1,5 @@
+service vendor.aidlmmwavedirection-semc /vendor/bin/hw/vendor.semc.hardware.aidlmmwavedirection-service.semc
+    class early_hal
+    user system
+    group system
+    shutdown critical
