@@ -1,0 +1,60 @@
+##### Add prop values by composition #####
+ro.semc.product.model=XQ-FS72
+ro.semc.ms_type_id=PM-1501-BV
+ro.semc.product.device=FS
+ro.product.model=XQ-FS72
+ro.product.system.model=XQ-FS72
+ro.product.vendor.model=XQ-FS72
+ro.product.odm.model=XQ-FS72
+ro.product.product.model=XQ-FS72
+ro.product.system_ext.model=XQ-FS72
+ro.product.name=XQ-FS72
+ro.product.system.name=XQ-FS72
+ro.product.vendor.name=XQ-FS72
+ro.product.odm.name=XQ-FS72
+ro.product.product.name=XQ-FS72
+ro.build.product=XQ-FS
+ro.product.device=XQ-FS
+ro.product.system.device=XQ-FS
+ro.product.vendor.device=XQ-FS
+ro.product.odm.device=XQ-FS
+ro.product.product.device=XQ-FS
+ro.product.system_ext.device=XQ-FS
+ro.build.version.incremental=071000A002004301397425691
+ro.system.build.version.incremental=071000A002004301397425691
+ro.vendor.build.version.incremental=071000A002004301397425691
+ro.odm.build.version.incremental=071000A002004301397425691
+ro.product.build.version.incremental=071000A002004301397425691
+ro.system_ext.build.version.incremental=071000A002004301397425691
+ro.build.fingerprint=Sony/XQ-FS72/XQ-FS:15/71.0.A.2.43/071000A002004301397425691:user/release-keys
+ro.build.display.id=71.0.A.2.43 release-keys
+ro.build.description=XQ-FS72-user 15 71.0.A.2.43 071000A002004301397425691 release-keys
+ro.build.host=BuildHost
+ro.build.user=BuildUser
+ro.oem.build.date=Thu Jun 19 14:53:20 JST 2025
+ro.oem.build.date.utc=1750312400
+ro.semc.version.sw_revision=71.0.A.2.43
+ro.semc.version.sw_variant=GLOBAL-C2
+ro.semc.version.sw_type=user
+
+# Copyright 2024-2025 Sony Corporation
+
+################### Static values ###################
+#
+# <key>=<value>
+# e.g. ro.com.google.ime.height_ratio=1.1
+#
+#####################################################
+ro.vendor.sony.wlan.6e_cc_list=HK,JP,AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LI,LT,LU,MT,NL,NO,PL,PT,RO,SK,SI,ES,SE,GB,CH,IS,MY,TH,TW,SG,MO
+ro.vendor.sony.wlan.11be_cc_list=HK,JP,AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LI,LT,LU,MT,NL,NO,PL,PT,RO,SK,SI,ES,SE,GB,CH,IS,TH,TW,SG,US,MO,MY
+ro.setupwizard.rotation_locked=false
+ro.oem_ant_switch_index_table=10,12,12,12,12,10,12,12,12,12,12,12,12,12,12,12,12,12,12,12,10,12,12,12,12,10,12,12,12,12,12,12,12,12,12,12,12,12,12,12,10,12,12,12,12,10,12,12,12,12,12,12,12,12,12,12,12,12,12,12,10,12,12,12,12,10,12,12,12,12,12,12,12,12,12,12,12,12,12,12
+ro.oem_sar_back_off_index_table=1,3,8,1,1,6,3,8,1,1,5,3,8,1,7,5,3,8,1,7,1,3,8,1,1,6,3,8,1,1,5,3,8,1,7,5,3,8,1,7,1,3,8,1,18,6,3,8,1,18,5,3,8,1,17,5,3,8,1,17,1,3,8,1,18,6,3,8,1,18,5,3,8,1,17,5,3,8,1,17
+ro.trackingId.booking=2428090
+ro.facebook.partnerid=sony:ee6c6fe5-cdd0-47f1-a355-9d672e85086a
+ro.linkedin.channel=Sony_PRELOAD
+ro.com.google.ime.height_ratio=1.1
+ro.com.google.ime.key_border=true
+ro.com.google.ime.theme_id=5
+setupwizard.feature.baseline_setupwizard_enabled=true
+#####################################################
