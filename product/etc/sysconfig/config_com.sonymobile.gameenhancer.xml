@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2024 Sony Corporation
+-->
+<config>
+    <hidden-api-whitelisted-app package="com.sonymobile.gameenhancer" />
+    <hidden-api-whitelisted-app package="com.sonymobile.gameenhancer.api" />
+    <hidden-api-whitelisted-app package="com.sonymobile.gameenhancer.monitor" />
+
+    <allow-in-power-save package="com.sonymobile.gameenhancer.api" />
+    <!--  JIML-128236   -->
+    <allow-in-power-save package="com.sonymobile.gameenhancer.browser" />
+    <allow-in-power-save package="com.sonymobile.gameenhancer.monitor" />
+
+    <asl-file package="com.sonymobile.gameenhancer" path="/product/etc/asl/com.sonymobile.gameenhancer.data.safety.xml"/>
+    <asl-file package="com.sonymobile.gameenhancer.api" path="/product/etc/asl/com.sonymobile.gameenhancer.api.data.safety.xml"/>
+    <asl-file package="com.sonymobile.gameenhancer.monitor" path="/product/etc/asl/com.sonymobile.gameenhancer.monitor.data.safety.xml"/>
+    <asl-file package="com.sonymobile.gameenhancer.browser" path="/product/etc/asl/com.sonymobile.gameenhancer.browser.data.safety.xml"/>
+</config>
+
