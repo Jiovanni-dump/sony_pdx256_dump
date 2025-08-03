@@ -1,0 +1,65 @@
+{
+  "config":{
+    "soc_id": ["618"]
+  },
+  "sns_combined_light_platform":{
+    "owner": "sns_combined_light",
+    ".config":{
+      "owner": "sns_combined_light",
+      "als_ratio":{ "type": "flt", "ver": "0",
+        "data": "1.0"
+      },
+      "rls_saturate":{ "type": "flt", "ver": "0",
+        "data": "20000"
+      },
+      "cls_thd_adj":{ "type": "flt", "ver": "0",
+        "data": "0.05"
+      },
+      "cls_thd_min":{ "type": "flt", "ver": "0",
+        "data": "1"
+      },
+      "ab_0_als_thd":{ "type": "flt", "ver": "0",
+        "data": "0"
+      },
+      "ab_0_rls_ratio":{ "type": "flt", "ver": "0",
+        "data": "0.5"
+      },
+      "ab_1_als_thd":{ "type": "flt", "ver": "0",
+        "data": "10"
+      },
+      "ab_1_rls_ratio":{ "type": "flt", "ver": "0",
+        "data": "0.5"
+      },
+      "ab_2_als_thd":{ "type": "flt", "ver": "0",
+        "data": "50"
+      },
+      "ab_2_rls_ratio":{ "type": "flt", "ver": "0",
+        "data": "0.5"
+      },
+      "ab_3_als_thd":{ "type": "flt", "ver": "0",
+        "data": "100"
+      },
+      "ab_3_rls_ratio":{ "type": "flt", "ver": "0",
+        "data": "0.5"
+      },
+      "disp_0_als_thd":{ "type": "flt", "ver": "0",
+        "data": "500"
+      },
+      "disp_0_rls_ratio":{ "type": "flt", "ver": "0",
+        "data": "0.5"
+      },
+      "disp_1_als_thd":{ "type": "flt", "ver": "0",
+        "data": "5000"
+      },
+      "disp_1_rls_ratio":{ "type": "flt", "ver": "0",
+        "data": "0.25"
+      },
+      "disp_2_als_thd":{ "type": "flt", "ver": "0",
+        "data": "10000"
+      },
+      "disp_2_rls_ratio":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      }
+    }
+  }
+}

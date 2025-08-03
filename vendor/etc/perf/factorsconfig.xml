@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * All rights reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<WorkloadConfigs>
+    <WLConfigResources>
+        <!-- Reference XML parameters/-->
+        <!--Workload Name="com.miHoYo.hkrpg" LE="600" Target="tuna" Type="1" Weight="2" /-->
+
+    </WLConfigResources>
+</WorkloadConfigs>
