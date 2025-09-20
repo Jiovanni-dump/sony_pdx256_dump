@@ -1,0 +1,14 @@
+# sssi_64-user 16 BQ2A.250525.001-BP2A.250605.031.A3 QSSI-16.1.0-REL-250811-1100 release-keys
+- manufacturer: sony
+- platform: sun
+- codename: pdx256
+- flavor: sssi_64-user
+- release: 16
+- id: 71.1.A.2.68
+- incremental: QSSI-16.1.0-REL-250811-1100
+- tags: release-keys
+- fingerprint: Sony/pdx256/pdx256:15/AQ3A.241126.002/SHIMANTO-1.1.0-REL-250802-0203:user/release-keys
+- is_ab: true
+- brand: Sony
+- branch: sssi_64-user-16-BQ2A.250525.001-BP2A.250605.031.A3-QSSI-16.1.0-REL-250811-1100-release-keys
+- repo: sony_pdx256_dump
