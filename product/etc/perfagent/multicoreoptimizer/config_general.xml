@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2024 Sony Corporation.
+-->
+<Feature>
+    <Name>MultiCoreOptimizer</Name>
+    <Timeout>300000</Timeout>
+    <GeneralAppConfigSet></GeneralAppConfigSet>
+    <Apps>
+        <App configSet="general_default">com.android.chrome</App>
+        <App configSet="general_default">com.google.android.youtube</App>
+        <App configSet="general_default">com.twitter.android</App>
+        <App configSet="general_default">jp.naver.line.android</App>
+        <App configSet="general_default">com.facebook.katana</App>
+        <App configSet="general_default">com.instagram.android</App>
+        <App configSet="general_default">com.ss.android.ugc.trill</App>
+        <App configSet="general_default">jp.co.yahoo.android.yjtop</App>
+    </Apps>
+    <IgnoreApps>
+    </IgnoreApps>
+
+    <Stats>
+        <Num>Duration, Duration.Boost, BoostCount</Num>
+        <Decimal/>
+        <Str>PackageName, Timestamp</Str>
+    </Stats>
+
+    <ConfigSets>
+        <ConfigSet id="general_default">
+            <Config>
+                <StaticSetting>
+                    <MpctlRawResources></MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 1000, 1000</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>1, 1000</CpuProvider>
+                <FpsTargetDetector>1000, 0, 0, 0, 1, 20000, 1, 40000</FpsTargetDetector>
+                <FpsQualityJudger>1, 1000, 0, 0, 0, 0, 0, 1000, 0, 1000</FpsQualityJudger>
+                <!-- define temperature thresholds to always determine high temp in order to always apply low perf conf -->
+                <ThermalQualityJudger>1, 1000, 60000, 60000, 0, 0, 0, 0, 1000</ThermalQualityJudger>
+                <CpuJudger>1, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_general, 1, 100, 60, 2, 1000, 10000, 10, 20, 2<!-- performance -->
+                        <WeightsSet>
+                            <Weights>0, 100</Weights><!-- high perf(low temp), selected to boost -->
+                            <Weights>100, 0</Weights><!-- mid perf(mid temp) -->
+                            <Weights>100, 0</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+        </ConfigSet>
+    </ConfigSets>
+</Feature>

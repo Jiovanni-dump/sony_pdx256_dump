@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* © 2025 Sony Corporation
+-->
+<exceptions>
+  <exception package="com.sonymobile.providers.media">
+    <permission name="android.permission.READ_MEDIA_IMAGES" fixed="false"/>
+    <permission name="android.permission.READ_MEDIA_VIDEO" fixed="false"/>
+  </exception>
+</exceptions>
