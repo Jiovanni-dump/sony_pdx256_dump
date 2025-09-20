@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * All rights reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<QapeBoostConfigs>
+    <QapePerfBoost>
+        <!-- Reference XML parameters/-->
+        <!--Config
+            Id="0x1" Package="com.miHoYo.hkrpg" Scenario="" Enable="true" Timeout="600" Target="tuna" Fps="60" TargetFps="59.5" GameClass="1"
+            Resources="0x40C00000, 0x1, 0x40804000, 0xEFFF" /-->
+
+        <!--Config
+            Id="0x1" Package="com.king.candycrushsaga" Scenario="AA" Enable="true" Timeout="600" Target="tuna" Fps="120" TargetFps="59.5" GameClass="1"
+            Resources="0x40C00000, 0x1, 0x40804000, 0xEFFF" /-->
+    </QapePerfBoost>
+</QapeBoostConfigs>

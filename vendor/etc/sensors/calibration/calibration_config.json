@@ -1,0 +1,58 @@
+{
+  "cal_param": {
+    "accel": {
+      "cal_type": 1,
+      "miscta_id": 4963,
+      "sensor_type": 1,
+      "measure_type": 0,
+      "cal_times": 1,
+      "cal_wait": 200,
+      "cal_file": "pakala_qrd_lsm6dso_0.json.lsm6dso_0_platform.accel.fac_cal.bias",
+      "cal_data": ["lsm6dso_0_platform.accel.fac_cal.bias/x",
+                   "lsm6dso_0_platform.accel.fac_cal.bias/y",
+                   "lsm6dso_0_platform.accel.fac_cal.bias/z"]
+    },
+    "gyro": {
+      "cal_type": 1,
+      "miscta_id": 4964,
+      "sensor_type": 4,
+      "measure_type": 0,
+      "cal_times": 1,
+      "cal_wait": 200,
+      "cal_file": "pakala_qrd_lsm6dso_0.json.lsm6dso_0_platform.gyro.fac_cal.bias",
+      "cal_data": ["lsm6dso_0_platform.gyro.fac_cal.bias/x",
+                   "lsm6dso_0_platform.gyro.fac_cal.bias/y",
+                   "lsm6dso_0_platform.gyro.fac_cal.bias/z"]
+    },
+    "als": {
+      "cal_type": 1,
+      "miscta_id": 2305,
+      "sensor_type": 5,
+      "measure_type": 1,
+      "cal_times": 10,
+      "cal_wait": 200,
+      "cal_file": "pakala_qrd_stk3a5x_0.json.stk3a5x_0_platform.als.fac_cal",
+      "cal_data": ["stk3a5x_0_platform.als.fac_cal/scale"]
+    },
+    "rals": {
+      "cal_type": 1,
+      "miscta_id": 4973,
+      "sensor_type": 33171103,
+      "measure_type": 1,
+      "cal_times": 10,
+      "cal_wait": 200,
+      "cal_file": "pakala_qrd_stk3a8x_0.json.stk3a8x_0_platform.als.fac_cal",
+      "cal_data": ["stk3a8x_0_platform.als.fac_cal/scale"]
+    },
+    "prox": {
+      "cal_type": 0,
+      "miscta_id": 4970,
+      "cal_value": [499, 828]
+    },
+    "baro": {
+      "cal_type": 0,
+      "miscta_id": 4974,
+      "cal_value": [0.79]
+    }
+  }
+}
