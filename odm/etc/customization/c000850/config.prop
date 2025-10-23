@@ -1,0 +1,4 @@
+import /odm/etc/customization/SO-51F/config.prop
+import /odm/etc/customization/ZIIO1R5/config.prop
+ro.product.odm.brand=docomo
+ro.product.vendor.brand=docomo
