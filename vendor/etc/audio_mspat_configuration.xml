@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<audio_mspat_configuration>
+	<spatializers>
+		<!--Dolby spatializer-->
+		<spatializer name="Dolby" libName="libswspatializeraidl.so" uuid="ccd4cf09-a79d-46c2-9aae-06a1698d6c8f">
+			<vendor_params>
+				<param value="256"/> <!-- DOLBY_SPATIALIZER_PARAM_PROFILE_ID -->
+				<param value="257"/> <!-- DOLBY_SPATIALIZER_PARAM_GEQ_BAND_GAINS -->
+				<param value="258"/> <!-- DOLBY_SPATIALIZER_PARAM_SELECTED_TUNING -->
+				<param value="259"/> <!-- DOLBY_SPATIALIZER_PARAM_TUNING -->
+				<param value="260"/> <!-- DOLBY_SPATIALIZER_PARAM_TUNING_LEN -->
+				<param value="261"/> <!-- DOLBY_SPATIALIZER_PARAM_SET_AUDIO_FLAG -->
+			</vendor_params>
+		</spatializer>
+
+		<!--360 spatializer-->
+		<spatializer name="Sony" libName="libtsrspataidl.so" uuid="93f04452-e4fe-41cc-91fa-e475b6d1d6a0">
+			<vendor_params>
+				<param value="100"/>
+				<param value="101"/>
+			</vendor_params>
+		</spatializer>
+	</spatializers>
+</audio_mspat_configuration>
