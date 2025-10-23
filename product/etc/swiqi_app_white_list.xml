@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<app-list>
+    <item>com.google.android.youtube</item>
+    <item>com.google.android.videos</item>
+    <item>com.android.chrome</item>
+    <item>com.sony.tvsideview.phone</item>
+    <item>com.netflix.mediaclient</item>
+    <item>com.playstation.video</item>
+    <item>com.amazon.avod.thirdpartyclient</item>
+    <item>com.sonymobile.mmpf.mediaplayertest</item>
+    <item>com.sonymobile.colorgamut</item>
+    <item>com.sonyericsson.album</item>
+    <item>com.google.android.apps.photos</item>
+    <item>com.dazn</item>
+    <item>jp.co.nttdocomo.dtv</item>
+    <item>com.sonypicturescore.xperia</item>
+    <item>com.instagram.android</item>
+    <item>com.facebook.katana</item>
+    <item>com.ss.android.ugc.trill</item>
+    <item>jp.hamitv.hamiand1</item>
+    <item>tv.abema</item>
+    <item>jp.unext.mediaplayer</item>
+    <item>jp.nicovideo.android</item>
+    <item>com.disney.disneyplus</item>
+    <item>com.nttdocomo.android.danimeapp</item>
+    <item>jp.nhk.plus</item>
+    <item>com.au.app5g</item>
+    <item>com.panasonic.dokodemodiga</item>
+    <item>com.kddi.android.videopass</item>
+    <item>air.jp.co.fujitv.fodviewer</item>
+    <item>com.google.android.apps.youtube.kids</item>
+    <item>com.google.android.apps.photos.offline</item>
+    <item>com.qihoo.sonybrowser</item>
+    <item>tv.danmaku.bili</item>
+    <item>com.qiyi.video</item>
+    <item>com.tencent.qqlive</item>
+    <item>com.youku.phone</item>
+    <item>com.fm.media.gallery.sony</item>
+</app-list>

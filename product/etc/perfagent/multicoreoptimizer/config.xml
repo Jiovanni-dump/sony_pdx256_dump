@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2024 Sony Corporation.
+-->
+<Feature>
+    <Name>MultiCoreOptimizer</Name>
+    <Timeout>300000</Timeout>
+    <GeneralAppConfigSet>game_default</GeneralAppConfigSet>
+    <Apps>
+    </Apps>
+    <IgnoreApps>
+    </IgnoreApps>
+
+    <Stats>
+        <Num>Duration, Count, FpsVerdict.Terrible, FpsVerdict.Bad, FpsVerdict.Good, FpsVerdict.Excessive, ThermalVerdict.Low, ThermalVerdict.Mid, ThermalVerdict.High,
+            PerfLevel.Cpu.0.0, PerfLevel.Cpu.0.1, PerfLevel.Cpu.0.2, PerfLevel.Cpu.0.3, PerfLevel.Cpu.0.4, PerfLevel.Cpu.0.5, PerfLevel.Cpu.0.6, PerfLevel.Cpu.0.7, PerfLevel.Cpu.0.8, PerfLevel.Cpu.0.9,
+            PerfLevel.Cpu.1.0, PerfLevel.Cpu.1.1, PerfLevel.Cpu.1.2, PerfLevel.Cpu.1.3, PerfLevel.Cpu.1.4, PerfLevel.Cpu.1.5, PerfLevel.Cpu.1.6, PerfLevel.Cpu.1.7, PerfLevel.Cpu.1.8, PerfLevel.Cpu.1.9</Num>
+        <Decimal>FpsVerdict.Raw.Average, FpsVerdict.Raw.Stdev, ThermalVerdict.Raw.Begin, ThermalVerdict.Raw.End, ThermalVerdict.Raw.Min, ThermalVerdict.Raw.Max, ThermalVerdict.Raw.Average</Decimal>
+        <Str>Timestamp, FpsOptimizer, TargetFps, UserIntention.Thermal</Str>
+    </Stats>
+
+    <ConfigSets>
+        <ConfigSet id="game_default" filterTypes="fpsOptimizer, thermal, fps">
+            <Config><!-- fpsOptimizer="off" -->
+                <StaticSetting>
+                    <MpctlRawResources></MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 0, 0, 0, 1, 20000, 1, 40000</FpsTargetDetector>
+                <FpsQualityJudger>0, 500, 0, 0, 0, 0, 0, 500, 1, 5000</FpsQualityJudger>
+                <ThermalQualityJudger>0, 1000, 60000, 13000, 6000, 2000, 2000, 0, 1000</ThermalQualityJudger>
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 0, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- high perf(low temp) -->
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- mid perf(mid temp) -->
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+            <Config fpsOptimizer="on"><!-- same as thermal=mid -->
+                <StaticSetting>
+                    <MpctlRawResources>
+                        <MpctlRawResource>GpuMinFreq, 222</MpctlRawResource>
+                    </MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 0, 0, 0, 1, 20000, 1, 40000</FpsTargetDetector>
+                <FpsQualityJudger>0, 500, 0, 0, 0, 0, 0, 500, 1, 5000</FpsQualityJudger>
+                <ThermalQualityJudger>0, 1000, 60000, 13000, 6000, 2000, 2000, 0, 1000</ThermalQualityJudger>
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 0, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- high perf(low temp) -->
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- mid perf(mid temp) -->
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+            <Config fpsOptimizer="on" thermal="low">
+                <StaticSetting>
+                    <MpctlRawResources>
+                        <MpctlRawResource>GpuMinFreq, 222</MpctlRawResource>
+                        <MpctlRawResource>GpuMaxFreq, 607</MpctlRawResource>
+                        <MpctlRawResource>CpuGoldMaxFreq, 2400</MpctlRawResource>
+                        <MpctlRawResource>CpuPrimeMaxFreq, 2438</MpctlRawResource>
+                        <MpctlRawResource>CpuPrimeMaxOnline, 1</MpctlRawResource>
+                    </MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 0, 0, 0, 1, 20000, 1, 40000</FpsTargetDetector>
+                <FpsQualityJudger>0, 500, 0, 0, 0, 0, 0, 500, 1, 5000</FpsQualityJudger>
+                <ThermalQualityJudger>0, 1000, 60000, 15000, 10000, 2000, 2000, 0, 1000</ThermalQualityJudger>
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 0, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- high perf(low temp) -->
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- mid perf(mid temp) -->
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+            <Config fpsOptimizer="on" thermal="low" fps="60">
+                <StaticSetting>
+                    <MpctlRawResources>
+                        <MpctlRawResource>GpuMinFreq, 525</MpctlRawResource>
+                        <MpctlRawResource>GpuMaxFreq, 607</MpctlRawResource>
+                        <MpctlRawResource>CpuPrimeMaxOnline, 1</MpctlRawResource>
+                    </MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 60, 7, 13, 1, 20000, 1, 40000</FpsTargetDetector><!-- 60fps: 47-67fps -->
+                <FpsQualityJudger>1, 500, 60, 2, 3, 4, 0, 500, 1, 5000</FpsQualityJudger><!-- 58/55/51fps -->
+                <ThermalQualityJudger>1, 1000, 60000, 20000, 10000, 2000, 2000, 0, 1000</ThermalQualityJudger><!-- 40/30 degC-->
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 1, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>100, 100, 20, 0, 0,   2,   8,  18, 100, 100</Weights><!-- high perf(low temp) -->
+                            <Weights>100, 100, 20, 0, 0,   6,  16, 100, 100, 100</Weights><!-- mid perf(mid temp) -->
+                            <Weights>100, 100, 10, 0, 0, 100, 100, 100, 100, 100</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+            <Config fpsOptimizer="on" thermal="low" fps="120">
+                <StaticSetting>
+                    <MpctlRawResources>
+                        <MpctlRawResource>GpuMinFreq, 525</MpctlRawResource>
+                        <MpctlRawResource>GpuMaxFreq, 607</MpctlRawResource>
+                        <MpctlRawResource>CpuPrimeMaxOnline, 1</MpctlRawResource>
+                    </MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 120, 7, 23, 1, 20000, 1, 40000</FpsTargetDetector><!-- 120fps: 97-127fps -->
+                <FpsQualityJudger>1, 500, 120, 4, 3, 3, 0, 500, 1, 5000</FpsQualityJudger><!-- 116/113/110fps -->
+                <ThermalQualityJudger>1, 1000, 60000, 20000, 10000, 2000, 2000, 0, 1000</ThermalQualityJudger><!-- 40/30 degC -->
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 1, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>100, 100, 20, 0, 0,   2,   8,  18, 100, 100</Weights><!-- high perf(low temp) -->
+                            <Weights>100, 100, 20, 0, 0,   6,  16, 100, 100, 100</Weights><!-- mid perf(mid temp) -->
+                            <Weights>100, 100, 10, 0, 0, 100, 100, 100, 100, 100</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+            <Config fpsOptimizer="on" thermal="mid">
+                <StaticSetting>
+                    <MpctlRawResources>
+                        <MpctlRawResource>GpuMinFreq, 222</MpctlRawResource>
+                    </MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 0, 0, 0, 1, 20000, 1, 40000</FpsTargetDetector>
+                <FpsQualityJudger>0, 500, 0, 0, 0, 0, 0, 500, 1, 5000</FpsQualityJudger>
+                <ThermalQualityJudger>0, 1000, 60000, 12000, 9000, 2000, 2000, 0, 1000</ThermalQualityJudger>
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 0, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- high perf(low temp) -->
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- mid perf(mid temp) -->
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+            <Config fpsOptimizer="on" thermal="mid" fps="60">
+                <StaticSetting>
+                    <MpctlRawResources>
+                        <MpctlRawResource>GpuMinFreq, 525</MpctlRawResource>
+                    </MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 60, 7, 13, 1, 20000, 1, 40000</FpsTargetDetector><!-- 60fps: 47-67fps -->
+                <FpsQualityJudger>1, 500, 60, 2, 3, 4, 0, 500, 1, 5000</FpsQualityJudger><!-- 58/55/51fps -->
+                <ThermalQualityJudger>1, 1000, 60000, 18000, 7000, 2000, 2000, 0, 1000</ThermalQualityJudger><!-- 42/35 degC -->
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 1, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>100, 100, 20, 0, 0,  2,   8,  18, 100, 100</Weights><!-- high perf(low temp) -->
+                            <Weights>100, 100, 20, 0, 0,  6,  16, 100, 100, 100</Weights><!-- mid perf(mid temp) -->
+                            <Weights>100, 100, 10, 0, 0, 10, 100, 100, 100, 100</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+            <Config fpsOptimizer="on" thermal="mid" fps="120">
+                <StaticSetting>
+                    <MpctlRawResources>
+                        <MpctlRawResource>GpuMinFreq, 525</MpctlRawResource>
+                    </MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 120, 7, 23, 1, 20000, 1, 40000</FpsTargetDetector><!-- 120fps: 97-127fps -->
+                <FpsQualityJudger>1, 500, 120, 4, 3, 3, 0, 500, 1, 5000</FpsQualityJudger><!-- 116/113/110fps -->
+                <ThermalQualityJudger>1, 1000, 60000, 18000, 7000, 2000, 2000, 0, 1000</ThermalQualityJudger><!-- 42/35 degC -->
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 1, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>100, 100, 20, 0, 0,  2,   8,  18, 100, 100</Weights><!-- high perf(low temp) -->
+                            <Weights>100, 100, 20, 0, 0,  6,  16, 100, 100, 100</Weights><!-- mid perf(mid temp) -->
+                            <Weights>100, 100, 10, 0, 0, 10, 100, 100, 100, 100</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+            <Config fpsOptimizer="on" thermal="high">
+                <StaticSetting>
+                    <MpctlRawResources>
+                        <MpctlRawResource>GpuMinFreq, 389</MpctlRawResource>
+                    </MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 0, 0, 0, 1, 20000, 1, 40000</FpsTargetDetector>
+                <FpsQualityJudger>0, 500, 0, 0, 0, 0, 0, 500, 1, 5000</FpsQualityJudger>
+                <ThermalQualityJudger>0, 1000, 60000, 10000, 11000, 2000, 2000, 0, 1000</ThermalQualityJudger>
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 0, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- high perf(low temp) -->
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- mid perf(mid temp) -->
+                            <Weights>0, 0, 0, 0, 0, 0, 0, 0, 0, 0</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+            <Config fpsOptimizer="on" thermal="high" fps="60">
+                <StaticSetting>
+                    <MpctlRawResources>
+                        <MpctlRawResource>GpuMinFreq, 525</MpctlRawResource>
+                    </MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 60, 7, 13, 1, 20000, 1, 40000</FpsTargetDetector><!-- 60fps: 47-67fps -->
+                <FpsQualityJudger>1, 500, 60, 2, 3, 4, 0, 500, 1, 5000</FpsQualityJudger><!-- 58/55/51fps -->
+                <ThermalQualityJudger>1, 1000, 60000, 16000, 9000, 2000, 2000, 0, 1000</ThermalQualityJudger><!-- 44/35 degC -->
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 1, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>100, 100, 20, 0, 0,  2,   8,  18,  32, 100</Weights><!-- high perf(low temp) -->
+                            <Weights>100, 100, 20, 0, 0,  6,  16,  30, 100, 100</Weights><!-- mid perf(mid temp) -->
+                            <Weights>100, 100, 10, 0, 0, 10, 100, 100, 100, 100</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+            <Config fpsOptimizer="on" thermal="high" fps="120">
+                <StaticSetting>
+                    <MpctlRawResources>
+                        <MpctlRawResource>GpuMinFreq, 525</MpctlRawResource>
+                    </MpctlRawResources>
+                    <SysfsNodeRawResources></SysfsNodeRawResources>
+                </StaticSetting>
+                <FpsProvider>1, 500, 500</FpsProvider>
+                <ThermalProvider>1, 1000</ThermalProvider>
+                <CpuProvider>0, 1000</CpuProvider>
+                <FpsTargetDetector>500, 120, 7, 23, 1, 20000, 1, 40000</FpsTargetDetector><!-- 120fps: 97-127fps -->
+                <FpsQualityJudger>1, 500, 120, 4, 3, 3, 0, 500, 1, 5000</FpsQualityJudger><!-- 116/113/110fps -->
+                <ThermalQualityJudger>1, 1000, 60000, 16000, 9000, 2000, 2000, 0, 1000</ThermalQualityJudger><!-- 44/35 degC -->
+                <CpuJudger>0, 10000, 80000, 60000</CpuJudger>
+                <CpuManagers>
+                    <CpuManager>perf_set_cpu_cap_for_game, 1, 100, 60, 2, 500, 10000, 10, 20, 2
+                        <WeightsSet>
+                            <Weights>100, 100, 20, 0, 0,  2,   8,  18,  32, 100</Weights><!-- high perf(low temp) -->
+                            <Weights>100, 100, 20, 0, 0,  6,  16,  30, 100, 100</Weights><!-- mid perf(mid temp) -->
+                            <Weights>100, 100, 10, 0, 0, 10, 100, 100, 100, 100</Weights><!-- low perf(high temp) -->
+                        </WeightsSet>
+                    </CpuManager>
+                </CpuManagers>
+            </Config>
+        </ConfigSet>
+    </ConfigSets>
+</Feature>
