@@ -1,0 +1,18 @@
+# Copyright 2025 Sony Corporation
+
+################### Static values ###################
+#
+# <key>=<value>
+# e.g. ro.com.google.ime.height_ratio=1.1
+#
+#####################################################
+ro.vendor.sony.wlan.6e_cc_list=HK,JP,AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LI,LT,LU,MT,NL,NO,PL,PT,RO,SK,SI,ES,SE,GB,CH,IS,MY,TH,TW,SG,MO
+ro.vendor.sony.wlan.11be_cc_list=HK,JP,AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LI,LT,LU,MT,NL,NO,PL,PT,RO,SK,SI,ES,SE,GB,CH,IS,TH,TW,SG,US,MO,MY
+ro.setupwizard.rotation_locked=false
+ro.oem_ant_switch_index_table=10,12,12,12,12,10,12,12,12,12,12,12,12,12,12,12,12,12,12,12,10,12,12,12,12,10,12,12,12,12,12,12,12,12,12,12,12,12,12,12,10,12,12,12,12,10,12,12,12,12,12,12,12,12,12,12,12,12,12,12,10,12,12,12,12,10,12,12,12,12,12,12,12,12,12,12,12,12,12,12
+ro.oem_sar_back_off_index_table=1,3,8,1,1,6,3,8,1,1,5,3,8,1,7,5,3,8,1,7,1,3,8,1,1,6,3,8,1,1,5,3,8,1,7,5,3,8,1,7,1,3,8,1,18,6,3,8,1,18,5,3,8,1,17,5,3,8,1,17,1,3,8,1,18,6,3,8,1,18,5,3,8,1,17,5,3,8,1,17
+ro.trackingId.booking=2428090
+ro.facebook.partnerid=sony:ee6c6fe5-cdd0-47f1-a355-9d672e85086a
+ro.linkedin.channel=Sony_PRELOAD
+setupwizard.feature.baseline_setupwizard_enabled=true
+#####################################################

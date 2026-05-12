@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2025 Sony Corporation
+-->
+
+<config>
+    <component-override package="com.sony.clocks" >
+        <component class="com.sony.clocks.sonyclock3.SonyClock3Provider" enabled="true" />
+    </component-override>
+</config>
+

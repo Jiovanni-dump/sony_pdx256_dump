@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2024 Sony Corporation.
+-->
+<Feature>
+    <Name>PerfAgent</Name>
+    <SysfsNodeAgent>
+        <Resources>
+            <Resource>drm_measured_fps, /sys/class/drm/card0-sde-crtc-0/measured_fps, 1, 0</Resource>
+            <Resource>drm_fps_periodicity_ms, /sys/class/drm/card0-sde-crtc-0/fps_periodicity_ms, 1, 1</Resource>
+            <Resource>proc_stat, /proc/stat, 1, 0</Resource>
+            <Resource>thermistor_main, virtual_skin, 1, 0</Resource>
+        </Resources>
+    </SysfsNodeAgent>
+    <MpctlAgent>
+        <PerfSets>
+            <PerfSet id="cpu_cap_for_game" resources="0x40804000, 0x40804200, 0x40C3C000"><!-- PerformanceMaxFreq(APC0), PrimeMaxFreq(APC1), CpuSetTopApp -->
+                <PerfReq> 556,  614, 0x3F</PerfReq><!--  LowSVS_D2, LowSVS_D1 -->
+                <PerfReq> 748,  614, 0x3F</PerfReq><!--  LowSVS_D1, LowSVS_D1 -->
+                <PerfReq>1152, 1401, 0x3F</PerfReq><!--  LowSVS, SVS -->
+                <PerfReq>1555, 1401, 0x3F</PerfReq><!--  SVS, SVS -->
+                <PerfReq>1785, 1689, 0x3F</PerfReq><!-- SVS_L1, SVS_L1 -->
+                <PerfReq>2227, 2246, 0x3F</PerfReq><!-- Nominal, Nominal -->
+                <PerfReq>2400, 2438, 0x3F</PerfReq><!-- Nominal_L1, Nominal_L1 -->
+                <PerfReq>2745, 2841, 0xFF</PerfReq><!-- Turbo_L1, Turbo -->
+                <PerfReq>3072, 3072, 0xFF</PerfReq><!-- Turbo_L3, Turbo_L1 -->
+                <PerfReq>3532, 4320, 0xFF</PerfReq><!-- Boost, BoostPlus -->
+            </PerfSet>
+            <PerfSet id="cpu_cap_for_general" resources="0x40804000, 0x40804200, 0x42810000"><!-- PerformnceMaxFreq, PrimeMaxFreq, GpuMaxFreq -->
+                <PerfReq>3532, 4320, 1100</PerfReq><!-- Uncap -->
+                <PerfReq>2227, 2246, 525</PerfReq><!-- Cap -->
+            </PerfSet>
+        </PerfSets>
+        <MpctlRawResources>
+            <MpctlRawResource>GpuMinFreq,         0x4280C000</MpctlRawResource>
+            <MpctlRawResource>GpuMaxFreq,         0x42810000</MpctlRawResource>
+            <MpctlRawResource>CpuGoldMaxFreq,     0x40804000</MpctlRawResource>
+            <MpctlRawResource>CpuPrimeMaxFreq,    0x40804200</MpctlRawResource>
+            <MpctlRawResource>CpuGoldMaxOnline,   0x41004000</MpctlRawResource>
+            <MpctlRawResource>CpuPrimeMaxOnline,  0x41004200</MpctlRawResource>
+        </MpctlRawResources>
+    </MpctlAgent>
+    <McoAgent>
+        <ConfigPath>/product/etc/perfagent/multicoreoptimizer/config.xml</ConfigPath>
+        <ConfigPathForGeneral>/product/etc/perfagent/multicoreoptimizer/config_general.xml</ConfigPathForGeneral>
+    </McoAgent>
+</Feature>
