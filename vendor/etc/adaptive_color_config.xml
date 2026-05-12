@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<Config>
+    <Colormode id="1">
+        <Matrix lux="10" m11="1.0305" m12="0.0000" m13="0.0000" m21="0.0000" m22="1.0024" m23="0.0000" m31="0.0000" m32="0.0000" m33="0.8437" />
+        <Matrix lux="30" m11="1.0000" m12="0.0000" m13="0.0000" m21="0.0000" m22="1.0000" m23="0.0000" m31="0.0000" m32="0.0000" m33="1.0000" />
+        <Matrix lux="500" m11="1.0000" m12="0.0000" m13="0.0000" m21="0.0000" m22="1.0000" m23="0.0000" m31="0.0000" m32="0.0000" m33="1.0000" />
+        <Matrix lux="5000" m11="1.0207" m12="-0.0937" m13="-0.0169" m21="-0.0153" m22="0.9382" m23="-0.0128" m31="-0.0087" m32="-0.0114" m33="0.9302" />
+        <Matrix lux="10000" m11="1.0383" m12="-0.1011" m13="-0.0212" m21="-0.0195" m22="0.9523" m23="-0.0168" m31="-0.0114" m32="-0.0146" m33="0.9420" />
+        <Matrix lux="20000" m11="1.0428" m12="-0.1179" m13="-0.0315" m21="-0.0285" m22="0.9915" m23="-0.0261" m31="-0.0171" m32="-0.0219" m33="0.9845" />
+        <Matrix lux="30000" m11="1.0377" m12="-0.1332" m13="-0.0413" m21="-0.0366" m22="1.0292" m23="-0.0354" m31="-0.0220" m32="-0.0288" m33="1.0260" />
+        <Matrix lux="50000" m11="1.1055" m12="-0.1682" m13="-0.0629" m21="-0.0568" m22="1.0980" m23="-0.0556" m31="-0.0338" m32="-0.0437" m33="1.0819" />
+    </Colormode>
+    <Throttler>
+        <Debounce increase="50" decrease="50" />
+        <Thresholds>
+            <Threshold base="0" increase="0.05" decrease="0.05" />
+            <Threshold base="50" increase="0.05" decrease="0.05" />
+            <Threshold base="100" increase="0.05" decrease="0.05" />
+            <Threshold base="200" increase="0.05" decrease="0.05" />
+            <Threshold base="5000" increase="0.05" decrease="0.05" />
+        </Thresholds>
+    </Throttler>
+    <Iir>
+        <Interval>200</Interval>
+        <Alpha>
+            <presets>
+                <lux>0</lux>
+                <value>0.97</value>
+            </presets>
+            <presets>
+                <lux>300</lux>
+                <value>0.95</value>
+            </presets>
+            <presets>
+                <lux>500</lux>
+                <value>0.95</value>
+            </presets>
+            <presets>
+                <lux>1000</lux>
+                <value>0.94</value>
+            </presets>
+            <presets>
+                <lux>10000</lux>
+                <value>0.92</value>
+            </presets>
+            <presets>
+                <lux>50000</lux>
+                <value>0.90</value>
+            </presets>
+        </Alpha>
+        <Threshold>0.05</Threshold>
+    </Iir>
+</Config>

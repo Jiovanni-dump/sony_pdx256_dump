@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<app-list>
+    <app-item>
+        <package-name>com.android.chrome</package-name>
+        <audio-format>-1</audio-format>
+        <bit-rate>-1</bit-rate>
+    </app-item>
+    <app-item>
+        <package-name>com.microsoft.emmx</package-name>
+        <audio-format>-1</audio-format>
+        <bit-rate>-1</bit-rate>
+    </app-item>
+    <app-item>
+        <package-name>com.opera.browser</package-name>
+        <audio-format>-1</audio-format>
+        <bit-rate>-1</bit-rate>
+    </app-item>
+</app-list>
