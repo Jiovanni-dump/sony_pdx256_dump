@@ -1,0 +1,10 @@
+
+
+enable_key_border
+
+ 
+enable_secondary_symbols
+.
+%config_keyboard_height_ratio_portrait1.1/
+&config_keyboard_height_ratio_landscape1.1>
+config_system_lm_dir&$/product/usr/share/ime/google/d3_lms
